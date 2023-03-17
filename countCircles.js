@@ -68,7 +68,7 @@ function calcLeftRightTurns(flight) {
         angleCounter += changeOfDirInDeg(v[i - 1][0], v[i - 1][1], v[i][0], v[i][1]);
         dataPointCounter++;
 
-        if (timeCounter > (turnDuration / interval) && angleCounter < 360 && angleCounter > -360) {
+        if (dataPointCounter > (turnDuration / interval) && angleCounter < 360 && angleCounter > -360) {
             angleCounter = 0;
             dataPointCounter = 0;
         }
