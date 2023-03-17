@@ -57,7 +57,8 @@ function calcLeftRightTurns(flight) {
 
     let leftRightTurns = {
         left: 0,
-        right: 0
+        right: 0,
+        turnDuration: turnDuration
     }
     let timeCounter = 0;
     let angleCounter = 0;

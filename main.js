@@ -25,7 +25,8 @@ function readText(file) {
 function visualizeResults(file, lr) {
     let tableInfo = {
         flightLabel : file.name,
-        circleLabel : "Links: " + lr.left + " / " + "Rechts: " + lr.right
+        circleLabel : "Links: " + lr.left + " / " + "Rechts: " + lr.right,
+        turnDLabel  : lr.turnDuration + " s"
     }
 
     loadTableData([tableInfo])
@@ -37,6 +38,7 @@ function loadTableData(items) {
         let row = table.insertRow();
         row.insertCell(0).innerHTML = item.flightLabel;
         row.insertCell(1).innerHTML = item.circleLabel;
+        row.insertCell(2).innerHTML = item.turnDLabel;
     });
 }
 
