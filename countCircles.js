@@ -1,5 +1,5 @@
 /**
- * Diese Analyse basiert auf einer Java implementierung von Lars Rohloff
+ * Diese Analyse basiert auf einer Java Implementierung von Lars Roloff
  * https://github.com/wolke19/xcircles
  */
 
@@ -101,12 +101,12 @@ function changeOfDirInDeg(n1, e1, n2, e2) {
     let betragV1 = Math.sqrt(n1 * n1 + e1 * e1);
     let betragV2 = Math.sqrt(n2 * n2 + e2 * e2);
 
-    let richtunsAenderung = radiansToDegrees(Math.acos((skalarprodukt / (betragV1 * betragV2))));
+    let richtungsAenderung = radiansToDegrees(Math.acos((skalarprodukt / (betragV1 * betragV2))));
 
     if (kreuzprodukt < 0) {
-        richtunsAenderung *= -1;
+        richtungsAenderung *= -1;
     }
 
-    return richtunsAenderung;
+    return richtungsAenderung;
 }
 
