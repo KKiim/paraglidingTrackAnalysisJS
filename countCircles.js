@@ -42,7 +42,7 @@ function parseIGC(igc_txt) {
 
     let interval = parseInt(koordArray[1].substring(5, 7) - koordArray[0].substring(5, 7))
 
-    let flight =  { flightNamae: "myFlightName :)",
+    let flight =  { flightName: "myFlightName :)",
                     xyPosArray : xyPosArray,
                     interval   : interval}
 
