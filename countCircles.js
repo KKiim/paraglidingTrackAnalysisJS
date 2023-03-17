@@ -52,7 +52,7 @@ function parseIGC(igc_txt) {
 function calcLeftRightTurns(flight) {
     let v              = flight.xyPosArray
     const interval     = flight.interval
-    const turnDuration = 30
+    const turnDuration = document.getElementById("maxCircleDuration").value;
     console.log("Interval: " + interval + "turnDuration(Parameter): " + turnDuration)
 
     let leftRightTurns = {
