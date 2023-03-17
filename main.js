@@ -33,7 +33,7 @@ function visualizeResults(file, lr) {
 }
 
 function loadTableData(items) {
-    const table = document.getElementById("rlTableBody");
+    const table = document.getElementById("lrTableBody");
     items.forEach(item => {
         let row = table.insertRow();
         row.insertCell(0).innerHTML = item.flightLabel;
