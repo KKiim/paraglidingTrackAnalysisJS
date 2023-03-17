@@ -85,7 +85,7 @@ function calcLeftRightTurns(flight) {
     return leftRightTurns;
 }
 
-function radians_to_degrees(radians) {
+function radiansToDegrees(radians) {
     return radians * (180 / Math.PI);
 }
 
@@ -101,7 +101,7 @@ function changeOfDirInDeg(n1, e1, n2, e2) {
     let betragV1 = Math.sqrt(n1 * n1 + e1 * e1);
     let betragV2 = Math.sqrt(n2 * n2 + e2 * e2);
 
-    let richtunsAenderung = radians_to_degrees(Math.acos((skalarprodukt / (betragV1 * betragV2))));
+    let richtunsAenderung = radiansToDegrees(Math.acos((skalarprodukt / (betragV1 * betragV2))));
 
     if (kreuzprodukt < 0) {
         richtunsAenderung *= -1;
