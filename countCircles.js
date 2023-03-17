@@ -1,3 +1,9 @@
+/**
+ * Diese Analyse basiert auf einer Java implementierung von Lars Rohloff
+ * https://github.com/wolke19/xcircles
+ */
+
+
 function countCircles(igc_txt) {
     let flight = parseIGC(igc_txt)
     return calcLeftRightTurns(flight)
