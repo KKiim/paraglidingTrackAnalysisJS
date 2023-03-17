@@ -1,0 +1,5 @@
+17.03.2023 kr
+
+td Die Reihenfolge eingelesener Dateien aendert sich bei einer nten ausfuehrung vom submit-Button
+
+td Es werden manchmal weniger Kreise gezaehlt obwohl das max Kreisdauer groesser ist
