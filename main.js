@@ -1,9 +1,12 @@
+igcFiles = []
+
 const fileSelector = document.getElementById('file-selector');
 fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
     for (let file of fileList) {
         console.log(file.name)
         readText(file)
+        igcFiles.push(file)
     }
 });
 
