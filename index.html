@@ -2,7 +2,18 @@
 <html>
 
 <head>
+    <script src="countCircles.js" async></script>
     <script src="main.js" async></script>
+    <style>
+        table {
+            border: thick solid rgb(54, 85, 134);
+            margin: 20px
+        }
+
+        th, td {
+             border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,6 +23,16 @@
 <div>
     <input type="file" id="file-selector" multiple>
 </div>
+
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Dateiname</th>
+        <th>Kreise</th>
+      </tr>
+    </thead>
+    <tbody id="rlTableBody"></tbody>
+  </table>
 
 
 
