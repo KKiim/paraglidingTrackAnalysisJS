@@ -39,3 +39,9 @@ function loadTableData(items) {
         row.insertCell(1).innerHTML = item.circleLabel;
     });
 }
+
+function submitButton() {
+    for (file of igcFiles) {
+        readText(file)
+    }
+}
