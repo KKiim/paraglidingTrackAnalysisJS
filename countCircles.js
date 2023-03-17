@@ -60,27 +60,27 @@ function calcLeftRightTurns(flight) {
         right: 0,
         turnDuration: turnDuration
     }
-    let timeCounter = 0;
+    let dataPointCounter = 0;
     let angleCounter = 0;
 
     for (let i = 1; i < v.length; i++) {
 
         angleCounter += changeOfDirInDeg(v[i - 1][0], v[i - 1][1], v[i][0], v[i][1]);
-        timeCounter++;
+        dataPointCounter++;
 
         if (timeCounter > (turnDuration / interval) && angleCounter < 360 && angleCounter > -360) {
             angleCounter = 0;
-            timeCounter = 0;
+            dataPointCounter = 0;
         }
         else if (angleCounter >= 360) {
             leftRightTurns.right++;
             angleCounter -= 360;
-            timeCounter = 0;
+            dataPointCounter = 0;
         }
         else if (angleCounter <= -360) {
             leftRightTurns.left++;
             angleCounter += 360;
-            timeCounter = 0;
+            dataPointCounter = 0;
         }
     }
     return leftRightTurns;
