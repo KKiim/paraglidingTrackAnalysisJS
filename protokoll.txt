@@ -1,3 +1,12 @@
+18.03.2023 lr
+
+done: html aufgehübscht
+
+td  clear table befor recalculate
+td  add sum of l/r turns to bottom
+
+
+
 17.03.2023 kr
 
 td Die Reihenfolge eingelesener Dateien aendert sich bei einer nten ausfuehrung vom submit-Button
