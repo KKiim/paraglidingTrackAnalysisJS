@@ -1,3 +1,8 @@
+18.03.2023 kr
+
+td add Overview over igc(flights) in Cache
+td change url to something that makes sense. paraanalysis.com or something like that..
+
 18.03.2023 lr
 
 done: html aufgehübscht
@@ -13,4 +18,4 @@ td fix clear table button so it deletes files in cache
 
 td Die Reihenfolge eingelesener Dateien aendert sich bei einer nten ausfuehrung vom submit-Button
 
-td Es werden manchmal weniger Kreise gezaehlt obwohl das max Kreisdauer groesser ist
+done: Es werden manchmal weniger Kreise gezaehlt obwohl das max Kreisdauer groesser ist
