@@ -5,38 +5,53 @@
     <script src="countCircles.js" async></script>
     <script src="main.js" async></script>
     <style>
+
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+
         table {
             border: thick solid rgb(54, 85, 134);
-            margin: 20px
+            text-align: center;
+            margin: 20px;
         }
 
         th, td {
              border: 1px solid black;
+             text-align: center;
+             padding-top: 5px;
+             padding-bottom: 5px;
+             padding-left: 15px;
+             padding-right: 15px;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Flugauswertung</h1>
-<h2>für .igc Dateien</h2>
+<h1>Flight Track Analisys</h1>
+<h2 style="margin-bottom:2cm;">
+    for .igc logs
+</h2>
 
+<div style="margin-bottom:1cm;">
+    Max. circle Duration to be counted [seconds]: <input type="number" id="maxCircleDuration" name="maxCircleDuration" value="30" size="50">
+    <button type="button" onclick="submitButton()">recalculate turns</button>
+</div>
 
 <div>
     <input type="file" id="file-selector" multiple>
 </div>
 
-<div>
-    Max. circle Duration to be counted [seconds]: <input type="number" id="maxCircleDuration" name="maxCircleDuration" value="30">
-    <button type="button" onclick="submitButton()">recalculate turns</button>
-</div>
 
-  <table id="myTable">
+
+  <table id="myTable" style="margin-left:auto;margin-right:auto;">
     <thead>
       <tr>
-        <th>Dateiname</th>
-        <th>Kreise</th>
-        <th>max Kreisdauer</th>
+        <th>filename</th>
+        <th>turns</th>
+        <th>max circle duration</th>
       </tr>
     </thead>
     <tbody id="lrTableBody"></tbody>

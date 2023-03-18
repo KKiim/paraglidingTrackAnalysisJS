@@ -25,7 +25,7 @@ function readText(file) {
 function visualizeResults(file, lr) {
     let tableInfo = {
         flightLabel : file.name,
-        circleLabel : "Links: " + lr.left + " / " + "Rechts: " + lr.right,
+        circleLabel : "left: " + lr.left + " / " + "right: " + lr.right,
         turnDLabel  : lr.turnDuration + " s"
     }
 
