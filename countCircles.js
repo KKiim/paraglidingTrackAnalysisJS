@@ -105,7 +105,9 @@ function calcLeftRightTurns2(flight) {
     }
 
     let maxPoints = (turnDuration / interval)
-    for (let j = 0; j < angleArray.length - maxPoints; j++) {
+    for (let j = 0; j < angleArray.length - 1; j++) {
+
+        maxPoints = Math.min(maxPoints, angleArray.length - j)
 
         let aSum = 0
         for (let k = 0; k < maxPoints ; k++) {
