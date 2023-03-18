@@ -51,6 +51,13 @@ function submitButton() {
 function clearTable() {
 //https://www.zditect.com/guide/javascript/javascript-clear-table.html
     console.log("clearing table")
-    	var Table = document.getElementById("lrTableBody");
-    	Table.innerHTML = "";
+    var Table = document.getElementById("lrTableBody");
+    Table.innerHTML = "";
+
+    console.log("emptying igcFiles Array")
+    igcFiles.length = 0;
+
+    console.log("reset upload button")
+    document.getElementById("file-selector").value = "";
+
 }
