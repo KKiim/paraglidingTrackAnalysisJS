@@ -116,7 +116,13 @@ function calcLeftRightTurns2(flight) {
                 j += k
                 break
             }
-            else if (aSum <= -360) {
+        }
+
+        aSum = 0
+        for (let k = 0; k < maxPoints ; k++) {
+            aSum += angleArray[j + k]
+
+            if (aSum <= -360) {
                 leftRightTurns.left++;
                 j += k
                 break
