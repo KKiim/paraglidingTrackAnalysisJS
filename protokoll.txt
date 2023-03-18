@@ -2,6 +2,11 @@
 
 td add Overview over igc(flights) in Cache
 td change url to something that makes sense. paraanalysis.com or something like that..
+td think about Overall Roadmap
+    - Diagramm -> www.chartjs.org
+    - Embbeded Map ->
+    - The User should be able so see wich Flights are in Cache and interact with them
+    - The WebApp should Help Pilots in all Levels to improve their Flying Skils
 
 18.03.2023 lr
 

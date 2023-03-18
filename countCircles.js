@@ -104,14 +104,15 @@ function calcLeftRightTurns2(flight) {
         angleArray.push( changeOfDirInDeg(v[i - 1][0], v[i - 1][1], v[i][0], v[i][1]))
     }
 
-    let maxPoints = (turnDuration / interval)
+    const maxPointsC = (turnDuration / interval)
     for (let j = 0; j < angleArray.length - 1; j++) {
 
-        maxPoints = Math.min(maxPoints, angleArray.length - j)
+        let maxPoints = Math.min(maxPointsC, angleArray.length - j)
 
         let aSum = 0
         for (let k = 0; k < maxPoints ; k++) {
             aSum += angleArray[j + k]
+            aSum = Math.max(0, aSum)
 
             if (aSum >= 360) {
                 leftRightTurns.right++;
@@ -119,10 +120,17 @@ function calcLeftRightTurns2(flight) {
                 break
             }
         }
+    }
+
+    for (let j = 0; j < angleArray.length - 1; j++) {
+
+        let maxPoints = Math.min(maxPointsC, angleArray.length - j)
 
         aSum = 0
         for (let k = 0; k < maxPoints ; k++) {
             aSum += angleArray[j + k]
+            aSum = Math.min(0, aSum)
+
 
             if (aSum <= -360) {
                 leftRightTurns.left++;
