@@ -16,20 +16,26 @@ function readText(file) {
         res = event.target.result + '';
         console.log(event.name)
         let igc_txt = atob(res.split(',')[1]);
-        let lr = countCircles(igc_txt)
-        visualizeResults(file, lr)
+        let lrArr = countCirclesAll(igc_txt)
+        visualizeResults(file, lrArr)
     });
     reader.readAsDataURL(file);
 }
 
-function visualizeResults(file, lr) {
-    let tableInfo = {
-        flightLabel : file.name,
-        circleLabel : "left: " + lr.left + " / " + "right: " + lr.right,
-        turnDLabel  : lr.turnDuration + " s"
+function visualizeResults(file, lrArr) {
+
+    let tableInfos = []
+    for (lr of lrArr) {
+        let tableInfo = {
+            flightLabel : file.name,
+            circleLabel : "left: " + lr.left + " / " + "right: " + lr.right,
+            turnDLabel  : lr.turnDuration + " s"
+        }
+        tableInfos.push(tableInfo)
     }
 
-    loadTableData([tableInfo])
+    loadTableData(tableInfos)
+    drawLineChart(lrArr)
 }
 
 function loadTableData(items) {
@@ -60,4 +66,45 @@ function clearTable() {
     console.log("reset upload button")
     document.getElementById("file-selector").value = "";
 
+}
+
+function drawLineChart(lrArr) {
+    const ctx = document.getElementById('myChart');
+
+    let labels = []
+    let datasets = []
+    let dataLeft = []
+    let dataRight= []
+    for (lr of lrArr) {
+        labels.push(lr.turnDuration + " s")
+        dataLeft.push(lr.left)
+        dataRight.push(lr.right)
+    }
+
+    datasets.push({
+        label: '# of left Circles',
+        data: dataLeft,
+        borderWidth: 1
+    })
+
+    datasets.push({
+        label: '# of right Circles',
+        data: dataRight,
+        borderWidth: 1
+    })
+
+    new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: datasets
+    },
+    options: {
+        scales: {
+        y: {
+            beginAtZero: true
+        }
+        }
+    }
+    });
 }

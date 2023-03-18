@@ -7,7 +7,15 @@
 function countCircles(igc_txt) {
     let flight = parseIGC(igc_txt)
     return calcLeftRightTurns2(flight)
+}
 
+function countCirclesAll(igc_txt) {
+    let flight = parseIGC(igc_txt)
+    res = []
+    for (let i = 1; i <= 45; i++) {
+        res.push(calcLeftRightTurns2(flight, i))
+    }
+    return res;
 }
 
 function parseIGC(igc_txt) {
@@ -86,10 +94,12 @@ function calcLeftRightTurns(flight) {
     return leftRightTurns;
 }
 
-function calcLeftRightTurns2(flight) {
+function calcLeftRightTurns2(flight, turnDuration = null) {
+    if (turnDuration == null) {
+        turnDuration = document.getElementById("maxCircleDuration").value;
+    }
     let v              = flight.xyPosArray
     const interval     = flight.interval
-    const turnDuration = document.getElementById("maxCircleDuration").value;
     console.log("Interval: " + interval + "turnDuration(Parameter): " + turnDuration)
 
     let leftRightTurns = {
