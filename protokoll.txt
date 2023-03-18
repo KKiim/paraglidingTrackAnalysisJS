@@ -1,6 +1,7 @@
 18.03.2023 lr
 
 done: html aufgehübscht
+done: cleat table button
 
 td  clear table befor recalculate
 td  add sum of l/r turns to bottom
