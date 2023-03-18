@@ -4,6 +4,7 @@ done: html aufgehübscht
 
 td  clear table befor recalculate
 td  add sum of l/r turns to bottom
+td fix clear table button so it deletes files in cache
 
 
 
