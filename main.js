@@ -47,3 +47,10 @@ function submitButton() {
         readText(file)
     }
 }
+
+function clearTable() {
+//https://www.zditect.com/guide/javascript/javascript-clear-table.html
+    console.log("clearing table")
+    	var Table = document.getElementById("lrTableBody");
+    	Table.innerHTML = "";
+}
